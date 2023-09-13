@@ -16,13 +16,13 @@ public class Main{
         for(int i=0;i<T;i++)
         {
           StringTokenizer st=new StringTokenizer(br.readLine());
-           while(st.hasMoreTokens()){
+           
             A=Integer.parseInt(st.nextToken());
             B=Integer.parseInt(st.nextToken());
-           }
+           
          
             bw.write(String.valueOf(A+B)+"\n");
-           
+            
         }
          bw.flush();
     }
