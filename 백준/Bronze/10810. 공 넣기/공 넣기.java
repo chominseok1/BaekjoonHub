@@ -1,28 +1,31 @@
 import java.util.*;
-public class Main
-{
-    public static void main(String args[])
-    {
-        Scanner scan=new Scanner(System.in);
-        int N=scan.nextInt();
-        int M=scan.nextInt();
-        int arr[]=new int[N];
-        int i=0; 
+import java.io.*;
+public class Main{
+    public static void main(String args[]) throws IOException{
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        String s=br.readLine(); // 첫줄 받기
+        StringTokenizer st=new StringTokenizer(s);
+        int N=Integer.parseInt(st.nextToken()); //바구니 갯수
+        int M=Integer.parseInt(st.nextToken()); // 공을 넣을 횟수
+        String ss="";
+        int i=0;
         int j=0;
         int k=0;
+        int[] arr=new int[N];
         for(int a=0;a<M;a++)
         {
-            i=scan.nextInt()-1; //배열의 인덱스는 0번부터
-            j=scan.nextInt()-1; // 배열의 인덱스는 0번부터
-            k=scan.nextInt(); // 공 번호
-            for(int b=i;b<=j;b++)
-            {
+            ss=br.readLine();
+            StringTokenizer st2=new StringTokenizer(ss);
+            i=Integer.parseInt(st2.nextToken())-1;
+            j=Integer.parseInt(st2.nextToken())-1;
+            k=Integer.parseInt(st2.nextToken());
+            for(int b=i;b<=j;b++){
                 arr[b]=k;
             }
         }
-        for(int num:arr)
-        {
-            System.out.print(num+" ");
+        for(int n:arr){
+            System.out.print(n+" ");
         }
+        
     }
 }
