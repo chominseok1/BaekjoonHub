@@ -22,9 +22,9 @@ public class Main{
 		double score=0;
 		double avg=0;
 		for(int i=0;i<N;i++) {
-			score+=(double)arr[i];
+			score+=(double)arr[i]/max*100;
 		}
-		avg=score/max*100/N;
+		avg=score/N;
 		System.out.println(avg);
 		
     }
