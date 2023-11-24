@@ -14,9 +14,7 @@ public class Main{
         }
         int sum=0;
         while(!stack.isEmpty()){
-            int a=stack.peek();
-            sum+=a;
-            stack.pop();
+            sum+=stack.pop();
         }
         System.out.println(sum);
     }
